@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Links — Guilherme A.G (gg)</title>
+  <meta name="description" content="Acesse meus links oficiais: portfólio, redes sociais e contato." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Meus Links — Guilherme A.G" />
+  <meta property="og:description" content="Acesse meus links oficiais: redes sociais e contato." />
+  <meta property="og:url" content="https://seudominio.com/links" />
+  <meta property="og:image" content="https://seudominio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#22c55e" />
+  <link rel="canonical" href="https://seudominio.com/links" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#000; --fg:#fff; --muted:#d8dde2; --card:#0f1620; --card-border:#233042;
+      --accent:#48077e; --accent-contrast:#7b27ca; --radius:12px; --container:720px;
+      --shadow:0 6px 18px rgba(78,47,104,.25); --font:"Inter",system-ui,sans-serif;
+    }
+    body{margin:0;font-family:var(--font);color:var(--fg);
+      background:radial-gradient(1200px 800px at 10% 0%, #0e1621 0%, var(--bg) 40%), var(--bg);}
+    .container{max-width:var(--container);margin:0 auto;padding:24px 16px 64px;}
+
+    header{display:flex;align-items:center;gap:16px;margin:24px 0 12px;}
+    .avatar{width:84px;height:84px;border-radius:50%;border:2px solid var(--card-border);
+      overflow:hidden;box-shadow:var(--shadow);flex-shrink:0;background:#111;}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .title{font-size:1.5rem;font-weight:800;margin:0}
+    .subtitle{margin:4px 0 0;color:var(--muted);font-size:.95rem}
+
+    /* bloco de links mais estreito para não ficar gigante no desktop */
+    #links{margin:22px auto 0;display:grid;gap:10px;max-width:520px}
+
+    .link-card{
+      display:flex;align-items:center;gap:10px;
+      padding:9px 12px;                /* ↓ menor */
+      border-radius:var(--radius);
+      background:var(--card);border:1px solid var(--card-border);
+      text-decoration:none;color:var(--fg);box-shadow:var(--shadow);
+      transition:transform .18s ease,border-color .18s ease;
+      font-size:.92rem;                /* ↓ menor */
+      line-height:1.1;
+    }
+    .link-card:hover{transform:translateY(-2px);border-color:var(--accent)}
+    .icon{width:18px;height:18px}      /* ↓ menor */
+    .label{font-weight:600}
+    .spacer{flex:1 1 auto}
+    .chip{font-size:.7rem;padding:3px 6px;border-radius:999px;
+      background:var(--accent-contrast);color:var(--accent)}
+    .link-card.featured{border-color:var(--accent);
+      background:radial-gradient(600px 150px at 20% 0%, rgba(72,7,126,.18), transparent 60%),var(--card)}
+
+    footer{margin-top:32px;color:var(--muted);font-size:.85rem;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <!-- Foto local sem espaço no nome -->
+        <img src="gg-perfil.jpg" alt="Foto de perfil do Guilherme" onerror="this.src='https://avatars.githubusercontent.com/u/9919?s=200&v=4'">
+      </div>
+      <div>
+        <h1 class="title">Guilherme A.G (gg)</h1>
+        <p class="subtitle">Desenvolvedor de Software • redes e contato oficial</p>
+      </div>
+    </header>
+
+    <nav id="links" aria-label="links principais"></nav>
+
+    <footer>
+      <p>© <span id="year"></span> Guilherme A.G — Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <!-- Dados dos links -->
+  <script id="links-data" type="application/json">[
+    {"label":"GitHub","href":"https://github.com/Guilhermegg-06","icon":"github","featured":false},
+    {"label":"LinkedIn","href":"https://www.linkedin.com/in/guilherme-araujo-620006340/","icon":"linkedin","featured":false},
+    {"label":"WhatsApp","href":"https://wa.me/5582996352699","icon":"whatsapp","featured":false},
+    {"label":"E-mail","href":"mailto:ggdev0001@gmail.com","icon":"mail","featured":false}
+  ]</script>
+
+  <script>
+    // ÍCONES COMPLETOS
+    const ICONS = {
+      github:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.51 2.87 8.33 6.84 9.68.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.17-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.58 2.36 1.12 2.94.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.15-4.56-5.1 0-1.13.39-2.05 1.04-2.77-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.06.79-.22 1.63-.34 2.48-.35.85.01 1.69.13 2.48.35 1.9-1.33 2.74-1.06 2.74-1.06.55 1.4.2 2.44.1 2.7.65.72 1.04 1.64 1.04 2.77 0 3.96-2.34 4.83-4.57 5.09.36.32.68.95.68 1.92 0 1.39-.01 2.52-.01 2.87 0 .26.18.58.69.48A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>`,
+      linkedin:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v16h-4zM8.5 8h3.8v2.2h.05c.53-1 1.84-2.2 3.77-2.2 4.03 0 4.77 2.65 4.77 6.1V24h-3.99v-7.1c0-1.7-.03-3.9-2.37-3.9-2.37 0-2.73 1.85-2.73 3.77V24H8.5z"/></svg>`,
+      whatsapp:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M20.52 3.5A11.42 11.42 0 0 0 12.01.5C5.8.5.78 5.53.78 11.74c0 2.01.54 3.97 1.57 5.68L.5 23.5l6.25-1.8a11.2 11.2 0 0 0 5.26 1.34h.01c6.21 0 11.24-5.03 11.24-11.24 0-2.99-1.17-5.82-3.24-7.8ZM12.02 21a9.28 9.28 0 0 1-4.72-1.3l-.34-.2-3.71 1.07 1.06-3.61-.22-.37A9.24 9.24 0 0 1 2.7 11.74c0-5.09 4.15-9.25 9.27-9.25 2.48 0 4.81.97 6.56 2.72a9.22 9.22 0 0 1 2.72 6.54c0 5.12-4.16 9.26-9.23 9.26Zm5.3-6.92c-.29-.14-1.7-.83-1.97-.92-.26-.1-.45-.14-.63.14-.19.29-.72.92-.88 1.1-.16.19-.32.21-.6.07-.29-.14-1.22-.45-2.33-1.42-.86-.77-1.45-1.72-1.62-2-.17-.29-.02-.45.13-.59.14-.14.29-.36.43-.55.14-.19.19-.32.29-.53.1-.21.05-.4-.02-.56-.07-.14-.63-1.52-.86-2.08-.22-.53-.45-.46-.63-.46h-.54c-.19 0-.5.07-.76.35-.26.29-1 1-1 2.43 0 1.43 1.05 2.8 1.2 2.99.14.19 2.08 3.18 5.04 4.46.7.31 1.25.48 1.68.62.71.23 1.36.2 1.87.12.57-.08 1.7-.7 1.94-1.38.24-.69.24-1.28.17-1.39-.07-.11-.26-.18-.55-.32Z"/></svg>`,
+      mail:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>`
+    };
+
+    function renderLinks(){
+      const container=document.getElementById('links');
+      const raw=document.getElementById('links-data').textContent.trim();
+      let data=[]; try{data=JSON.parse(raw);}catch(e){console.error('JSON inválido',e);}
+      container.innerHTML='';
+
+      for(const item of data){
+        if(!item?.href || !item?.label) continue;
+        const a=document.createElement('a');
+        a.className='link-card'+(item.featured?' featured':'');
+        a.href=item.href; a.target='_blank'; a.rel='noopener noreferrer';
+
+        const iconWrap=document.createElement('span');
+        iconWrap.innerHTML=ICONS[item.icon] || '🔗';
+
+        const label=document.createElement('span');
+        label.className='label'; label.textContent=item.label;
+
+        const spacer=document.createElement('span'); spacer.className='spacer';
+
+        a.appendChild(iconWrap); a.appendChild(label); a.appendChild(spacer);
+        if(item.featured){ const chip=document.createElement('span'); chip.className='chip'; chip.textContent='Destaque'; a.appendChild(chip); }
+        container.appendChild(a);
+      }
+    }
+
+    document.getElementById('year').textContent=new Date().getFullYear();
+    renderLinks();
+  </script>
+</body>
+</html>
